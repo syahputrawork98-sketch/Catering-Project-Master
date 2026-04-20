@@ -1,40 +1,70 @@
 # 🎨 KANBAN FRONTEND - Module [USER / CUSTOMER]
 
-Fokus: Pengalaman pengguna mobile-first, estetika premium, dan fungsionalitas belanja.
+Fokus: Pengalaman pengguna mobile-first, estetika premium **Gourmet Hub**, dan reaktivitas Svelte 5.
 
 ---
 
-## 🏗️ UI/UX Status Board
+## 🏗️ UI/UX Atomic Status Board
 
-| Task | Status | Priority | Notes |
+| Phase | Component / Feature | Atom Detail | Status |
 | :--- | :--- | :--- | :--- |
-| **Login & Registration** | [x] DONE | High | Svelte 5 Runes implemented. |
-| **Daily Menu Grid** | [x] DONE | High | High-aesthetic grid system. |
-| **Sidebar Navigation** | [x] DONE | Medium | Reactive sliding menu. |
-| **Cart Drawer UI** | [x] DONE | High | Sliding Cart with persistent storage. |
-| **Checkout UI** | [x] DONE | High | Premium layout with tax calculation. |
-| **Order Tracking Stepper** | [x] DONE | Medium | Visual progress of order status. |
-| **Thermal Receipt (PDF)** | [x] DONE | High | Gourmet branded 80mm receipt. |
-| **Profile Management** | [ ] PLANNED | Low | Edit user info UI. |
+| **02** | **Registration UI** | Name, Phone, Role Toggle | [x] DONE |
+| **02** | **Login UI** | Secure Input + Error Toasts | [x] DONE |
+| **03** | **User Dashboard** | Welcome Header + Stats Grid | [x] DONE |
+| **04** | **Menu Grid** | Responsive Columns (2-4) | [x] DONE |
+| **04** | **Menu Card** | Image, Stock, Price Format | [x] DONE |
+| **04** | **Cart Drawer** | Sliding Layout + Persistence | [x] DONE |
+| **04** | **Order Stepper** | Visual Timeline (4 Stages) | [x] DONE |
+| **04** | **Digital Receipt** | 80mm Branded PDF Output | [x] DONE |
+| **05** | **Daily Catalog** | Horizontal Date Scroller | [x] DONE |
+| **05** | **Stock Awareness** | "Sold Out" Overlay & Grayscale | [x] DONE |
+| **06** | **Cart Persistence** | localStorage + Delivery Date Bind | [x] DONE |
 
 ---
 
-## 📝 Atomic Task Checklist
+## 📝 Micro-Atomic Technical Checklist (Learning Resource)
 
-### 1. Auth & Entry
-- [x] **Registration Form**: Input fields with validation feedback.
-- [x] **Role Selection**: Toggle for "Instansi" vs "Umum".
-- [x] **Login Page**: Secure entry point with error handling.
+### Phase 02: Authentication UI (Done)
+- [x] **Registration Form Implementation**
+    - [x] **File**: `src/routes/register/+page.svelte`.
+    - [x] **State**: Define `$state(false)` for tracking `loading` during form submission.
+    - [x] **Logic**: Remove category selector (Personal only) for public signup.
+    - [x] **Branding**: Sync logo and typography to **Gourmet Hub**.
+- [x] **Login Page Implementation**
+    - [x] **File**: `src/routes/login/+page.svelte`.
+    - [x] **Logic**: Extract success message from URL params (`registered=true`).
 
-### 2. Catalog & Shopping
-- [x] **Menu Cards**: Display image, name, and stock status.
-- [x] **Cart Logic**: Add/Remove items with local persistence.
-- [x] **Search & Filter**: Real-time menu filtering.
+### Phase 03, 04 & 05: UI & Catalog (Done)
+- [x] **Gourmet Hub Dashboard Hub**
+    - [x] **File**: `src/routes/dashboard/+page.svelte`.
+    - [x] **Overview**: Implement "Aksi Hari Ini" overview status.
+- [x] **Thermal Receipt Engine**
+    - [x] **File**: `src/lib/utils/pdfGenerator.ts`.
+    - [x] **Library**: Initialize `jsPDF` for 80mm format.
+- [x] **Premium Date Scroller**
+    - [x] **File**: `src/routes/dashboard/menu/+page.svelte`.
+    - [x] **UI**: Build horizontal `snap-x` scroller for 7-day navigation.
+    - [x] **Logic**: Use `selectedDate` derived from URL params to highlight active day.
+- [x] **Stock-Aware Menu Card**
+    - [x] **File**: `src/lib/components/MenuCard.svelte`.
+    - [x] **Logic**: Implement `{#if stock === 0}` overlay with "Habis Terjual" label.
+    - [x] **Visual**: Apply `grayscale` and `opacity-50` to images with zero stock.
 
-### 3. Logistics & Checkout
-- [x] **Checkout Summary**: Detailed breakdown of costs.
-- [x] **Status Stepper**: Visual indicator of delivery progress.
-- [x] **PDF Receipt**: Trigger generation of branded PDF.
+### Phase 06: Ordering & Cart (Done)
+- [x] **B2C Order Submission**
+    - [x] **File**: `src/routes/dashboard/checkout/+page.svelte`.
+    - [x] **Logic**: Bind `deliveryDate` from catalog to the checkout form.
+    - [x] **UX**: Automatic cart clearing on success using `cart.clear()` in `<form use:enhance>`.
 
----
-*Back to [Master Kanban](../../PROGRESS_KANBAN_MASTER.md)*
+### Phase 07.5: UI Integrity (In Progress)
+- [ ] **Svelte 5 Syntax Audit**
+    - [ ] Resolve "Unexpected Token" errors in `checkout/+page.svelte`.
+    - [ ] Audit all `$props()` usage to ensure total Svelte 5 compliance.
+- [ ] **Type-Safe Prop Management**
+    - [ ] Update `MenuCard.svelte` to use strict types for `basePrice` and `image`.
+
+### Phase 08: Puzzle Masa Depan (Planned)
+- [ ] **Loyalty Points UI**
+    - [ ] Display "Gourmet Points" earned per transaction.
+- [ ] **Subscription Status UI**
+    - [ ] Add badge for active catering subscription tier.

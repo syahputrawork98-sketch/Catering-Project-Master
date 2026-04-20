@@ -1,43 +1,39 @@
-# Fullstack Catering: Internal Instansi Hub
+# 🍱 Gourmet Hub: Premium Catering System
 
-Sistem manajemen katering terintegrasi yang dirancang khusus untuk operasional katering instansi. Fokus pada performa mobile, manajemen porsi harian, dan pelaporan keuangan yang akurat.
+Selamat datang di **Gourmet Hub**, platform katering hibrida (B2B & B2C) yang dirancang khusus untuk kebutuhan instansi dan publik dengan estetika premium dan performa tinggi.
 
-## 🚀 Tech Stack
-- **Frontend/Fullstack Framework**: [SvelteKit](https://kit.svelte.dev/) (Mobile-optimized, Zero Virtual DOM).
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Responsive & Modern UI).
-- **Icons & Components**: Bits UI / Skeleton per Svelte standards.
-- **Database**: PostgreSQL.
-- **ORM**: Drizzle ORM (Type-safe & Scalable).
-- **Authentication**: Auth.js (Integrated SvelteKit Auth).
+---
 
-## 📂 Project Structure
-Proyek ini menggunakan struktur **"Brain & Muscles"**:
-- **Brain (Root)**: Berisi dokumentasi, SOP, dan perencanaan (folder `modules/`, `docs/`).
-- **Muscles (`catering-fullstack/`)**: Berisi seluruh kode aplikasi SvelteKit (Internal Hub).
+## 🏗️ Filosofi Workspace: Brain & Muscles
 
-Proyek terbagi menjadi 4 modul utama dengan hak akses terpisah (RBAC):
-1.  **Public**: Landing page & panduan pemesanan.
-2.  **User/Customer**: Katalog menu harian, Checkout, & Riwayat Pesanan.
-3.  **Customer Service (CS)**: Posting menu, verifikasi pembayaran, & bantuan input.
-4.  **Admin**: Laporan Laba Rugi (H/M/B) & Manajemen User.
+Proyek ini dipisahkan secara tegas antara tata kelola (Brain) dan eksekusi (Muscles):
 
-## 📝 Modular Progress Trackers (Atomic Tasks)
-Gunakan link di bawah ini untuk memantau detail pengerjaan Front-end dan Back-end di setiap modul:
+1.  **🧠 The Brain (Root)**: Command Center pengerjaan.
+    *   **Master Control**: [PROGRESS_KANBAN_MASTER.md](PROGRESS_KANBAN_MASTER.md) (Satu-satunya sumber kebenaran pengerjaan).
+    *   **Master SOP**: [WORKFLOW.md](WORKFLOW.md) (Protokol "7-Langkah Emas").
+    *   **Modular Kanban**: Folder `modules/` berisi detail teknis sub-atomik per modul.
+2.  **💪 The Muscles (`catering-fullstack/`)**: 
+    *   Implementasi kode menggunakan Svelte 5 (Runes), Drizzle ORM, Auth.js, dan Tailwind 4.
 
-| Module | Frontend Checklist | Backend Checklist |
+---
+
+## 📂 Peta Navigasi Unit Kerja (Sub-Atomic)
+
+| Module | Frontend (UI/UX) | Backend (Logic/Data) |
 | :--- | :--- | :--- |
 | **Public** | [KANBAN_FRONTEND.md](modules/public/KANBAN_FRONTEND.md) | [KANBAN_BACKEND.md](modules/public/KANBAN_BACKEND.md) |
 | **User** | [KANBAN_FRONTEND.md](modules/user/KANBAN_FRONTEND.md) | [KANBAN_BACKEND.md](modules/user/KANBAN_BACKEND.md) |
 | **CS** | [KANBAN_FRONTEND.md](modules/cs/KANBAN_FRONTEND.md) | [KANBAN_BACKEND.md](modules/cs/KANBAN_BACKEND.md) |
 | **Admin** | [KANBAN_FRONTEND.md](modules/admin/KANBAN_FRONTEND.md) | [KANBAN_BACKEND.md](modules/admin/KANBAN_BACKEND.md) |
 
-## 🗺️ Development Roadmap
-- [x] **Phase 1: Blueprint & Analysis** (Business Logic, Architecture, Database Schema).
-- [x] **Phase 2: Project Initialization** (SvelteKit Setup, Tailwind 4, DB Sync & Docker).
-- [/] **Phase 3: Auth & RBAC Implementation** (Registration, Login Logic, JWT Strategy - *Enabled*).
-- [/] **Phase 4: UI Framework & Dashboards** (Premium Landing Page, User/Admin/CS Layouts).
-- [ ] **Phase 5: Core Features (Daily Menu & Ordering)** (Catalog, Cart, Atomic Stock).
-- [ ] **Phase 6: Operational & Reporting** (CS Dashboard, Admin Finance Reports).
+---
+
+## 🛠️ Tech Stack & Standard
+- **Front-end**: Svelte 5 (Runes based).
+- **Styling**: Tailwind CSS 4 (Vibrant Gourmet).
+- **Database**: PostgreSQL with Drizzle ORM.
+- **Auth**: Auth.js (JWT Strategy + RBAC).
+- **Infrastruktur**: Docker Compose (Database & pgAdmin).
 
 ---
-*Created with discipline by the Chief Architecture Governor.*
+*Dikelola dengan disiplin tinggi oleh Master Documentation Lead.*

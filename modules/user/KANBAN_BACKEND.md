@@ -1,33 +1,56 @@
-# ⚙️ KANBAN BACKEND - Module [USER]
+# ⚙️ KANBAN BACKEND - Module [USER / CUSTOMER]
 
-Fokus: Integritas data, keamanan autentikasi, dan logika transaksi database.
+Fokus: Integritas data transaksi, keamanan RBAC, dan sinkronisasi stok atomik.
 
 ---
 
-## 🛠️ Logic & Database Status Board
+## 🏗️ Data Logic Atomic Status Board
 
-| Task | Status | Priority | Notes |
+| Phase | Logic / API Detail | Atom Detail | Status |
 | :--- | :--- | :--- | :--- |
-| **Auth Logic** | [x] DONE | High | Argon2id + JWT Strategy. |
-| **User CRUD** | [/] IN-PROG | High | Create/Read Done. Update Planned. |
-| **Order Engine** | [x] DONE | High | Atomic transactions for Orders. |
-| **Relational Queries** | [x] DONE | High | Drizzle relational with Items & Menus. |
-| **Stock decrement** | [ ] PLANNED | High | Inventory sync logic. |
-| **PDF Logic** | [x] DONE | Medium | Client-side jsPDF utility. |
+| **02** | **Argon2 Auth** | Secure Password Hashing | [x] DONE |
+| **03** | **RBAC Guard** | Server-side Hooks Protection | [x] DONE |
+| **04** | **Order Entry** | Drizzle INSERT into Orders | [x] DONE |
+| **05** | **Date Resolver** | Fetching menus by availableDate | [x] DONE |
+| **06** | **Atomic Stock Sync** | Stock subtraction in transaction | [x] DONE |
+| **06** | **Delivery Date Tracking** | Column assignment in Orders | [x] DONE |
 
 ---
 
-## 📝 Atomic Task Checklist
+## 📝 Micro-Atomic Technical Checklist (Learning Resource)
 
-### 1. Security & Identity
-- [x] **Registration Logic**: Password hashing and unique constraint handling.
-- [x] **Session Guard**: Auth.js integration with SvelteKit locals.
-- [ ] **Profile Update**: Backend mutation for user data changes.
+### Phase 02 & 03: Security & Auth (Done)
+- [x] **Secure Registration Handler**
+    - [x] **File**: `src/routes/register/+page.server.ts`.
+    - [x] **Logic**: Implement `argon2.hash(password)` for storage.
+    - [x] **Logic**: Default user category to `PUBLIK` and status to `ACTIVE`.
+- [x] **RBAC Protected Hooks**
+    - [x] **File**: `src/hooks.server.ts`.
+    - [x] **Logic**: Use `sequence(authHandle, rbacHandle)` to lock `/dashboard`.
 
-### 2. Transactional Core
-- [x] **Relational Loaders**: Fetching orders with nested items and menus.
-- [x] **Price Snapshots**: Ensuring historical prices are saved on order.
-- [ ] **Atomic Inventory**: Safe stock reduction using PG transactions.
+### Phase 05: Core Menu Logic (Done)
+- [x] **Date-Aware Catalog Loader**
+    - [x] **File**: `src/routes/dashboard/menu/+page.server.ts`.
+    - [x] **Query**: Use `db.query.dailySchedules.findMany` with `where: eq(availableDate, selectedDate)`.
+    - [x] **Metadata**: Generate 7-day metadata for the frontend scroller using `new Date()`.
 
----
-*Back to [Master Kanban](../../PROGRESS_KANBAN_MASTER.md)*
+### Phase 06: Atomic Ordering (Done)
+- [x] **Transaction-Based Checkout**
+    - [x] **File**: `src/routes/dashboard/checkout/+page.server.ts`.
+    - [x] **Atomicity**: Implement `db.transaction(async (tx) => { ... })`.
+    - [x] **Validation**: Check `currentStock >= quantity` before proceeding.
+    - [x] **Logic**: Subtract stock using `sql`${dailySchedules.currentStock} - ${quantity}``.
+    - [x] **Integration**: Store `deliveryDate` (selected in catalog) into the `orders` record.
+
+### Phase 07.5: System Integrity (In Progress)
+- [ ] **Global Type Augmentation**
+    - [ ] Declare `Session` and `User` modules in `app.d.ts`.
+    - [ ] Explicitly type `role` and `status` to fix layout errors.
+- [ ] **Auth.js Logic Polish**
+    - [ ] Ensure `jwt` and `session` callbacks handle type-casted roles safely.
+
+### Phase 08: Puzzle Masa Depan (Planned)
+- [ ] **Point Ledger Logic**
+    - [ ] Auto-calculate and insert points based on `grandTotal`.
+- [ ] **Cancellation Policy Engine**
+    - [ ] Logic to allow/block cancellation based on `deliveryDate` proximity.

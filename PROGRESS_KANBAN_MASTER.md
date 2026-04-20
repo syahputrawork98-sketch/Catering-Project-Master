@@ -1,38 +1,38 @@
 # 📊 Project Master Kanban: Fullstack Catering
 
-Dokumen ini adalah pusat kendali progres pengerjaan fitur. Sinkronisasi dilakukan secara berkala antara Front-end, Back-end, dan Database.
+Dokumen ini adalah Command Center pengerjaan fitur dengan resolusi **Micro-Atomic**. Gunakan file ini sebagai "Peta Navigasi" utama untuk memahami alur teknis pengerjaan.
 
 ---
 
 ## 🏗️ Master Development Board
 
-| Phase | Feature Bereich | Frontend Status | Backend Status | Roadmap Status |
+| Phase | Feature Bereich | Frontend Detail | Backend Detail | Status Tag |
 | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Infrastructure & Core** | [x] Design System | [x] Docker + DB | **DONE** |
-| **02** | **Auth & RBAC** | [x] Registration UI | [x] Argon2 + JWT | **DONE** |
-| **03** | **Architecture/UI** | [x] Landing Page | [x] Middleware | **DONE** |
-| **04** | **Logistics & PDF** | [/] Branded Receipt | [x] Order Queries | **IN-PROGRESS** |
-| **05** | **Core: Daily Menu** | [ ] Menu Catalog | [ ] Daily Schedule | **PLANNED** |
-| **06** | **Core: Ordering** | [ ] Cart System | [ ] Inventory Sync | **PLANNED** |
-| **07** | **Operational** | [ ] CS Dashboard | [ ] Status Engine | **PLANNED** |
-| **08** | **Reporting** | [ ] Finance Logic | [ ] PDF Reports | **PLANNED** |
+| **01** | **Infrastructure** | [x] SvelteKit 5 + Vite | [x] Docker + Postgres | **DONE** |
+| **02** | **Auth & Entry** | [x] Register/Login UI | [x] Argon2 + Auth.js | **DONE** |
+| **03** | **Architecture** | [x] Gourmet Theme | [x] Role-Based Guard | **DONE** |
+| **04** | **Logistics 1** | [x] 80mm Receipt PDF | [x] Relational Order Query | **DONE** |
+| **05** | **Core Menu** | [x] Premium Date Scroller | [x] Atomic Date-based Resolver | **DONE** |
+| **06** | **Ordering** | [x] Mobile Cart persistence | [x] Atomic Stock Sync Transaction | **DONE** |
+| **07** | **Operations** | [x] Unified Staff Sidebars | [x] B2B Manual Account Tool | **DONE** |
+| **07.5** | **Integrity** | [ ] Type Augmentation | [ ] Null-Safety Audit | **IN PROGRESS** |
+| **08** | **Reporting** | [ ] Admin Finance UI | [ ] Profit Aggregation | **PLANNED** |
 
 ---
 
-## 🎯 Current Sprint: Phase 04 - Logistics & PDF
-Fokus pada estetika struk belanja dan kemudahan akses bagi pelanggan dan CS.
+## 🎯 Status Update: Phase 04 - Micro-Atomic Brain Optimization
+Transformasi dokumentasi menjadi sumber daya belajar yang presisi.
 
-- [x] **Consolidation**: Renamed `catering-fullstack` and cleaned up `app/`.
-- [x] **Premium Receipt**: Refined aesthetics of `pdfGenerator.ts`.
-- [x] **CS Integration**: Added "Cetak Struk" button to CS Orders.
-- [/] **Data Verification**: Ensuring all pricing snapshots are accurate.
+- [x] **Policy**: Updated `.cursorrules` for Master Documentation vs Elite Developer.
+- [x] **Micro-Atomic Expansion**: Rewrote all historical "DONE" tasks in 8 modules with technical implementation details.
+- [x] **Puzzle Mapping**: Integrated granular future tasks for Phase 05-08 into modular checklists.
 
 ---
 
-## 📂 Modular Kanban Links
-Gunakan link di bawah ini untuk melihat detail tugas atomik di setiap modul:
+## 📂 Micro-Atomic Kanban Modules
+Klik link di bawah untuk membedah detail teknis pengerjaan di setiap lapisan:
 
-| Module | Frontend Checklist | Backend Checklist |
+| Module | Frontend (Aesthetics/UI) | Backend (Logic/Data) |
 | :--- | :--- | :--- |
 | **Public** | [KANBAN_FRONTEND.md](modules/public/KANBAN_FRONTEND.md) | [KANBAN_BACKEND.md](modules/public/KANBAN_BACKEND.md) |
 | **User** | [KANBAN_FRONTEND.md](modules/user/KANBAN_FRONTEND.md) | [KANBAN_BACKEND.md](modules/user/KANBAN_BACKEND.md) |
@@ -40,4 +40,4 @@ Gunakan link di bawah ini untuk melihat detail tugas atomik di setiap modul:
 | **Admin** | [KANBAN_FRONTEND.md](modules/admin/KANBAN_FRONTEND.md) | [KANBAN_BACKEND.md](modules/admin/KANBAN_BACKEND.md) |
 
 ---
-*Diedit terakhir pada: 2026-04-20 oleh Antigravity Architect.*
+*Diedit terakhir pada: 2026-04-20 oleh Master Documentation Lead.*

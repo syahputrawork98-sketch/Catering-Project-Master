@@ -1,27 +1,39 @@
 # ⚙️ KANBAN BACKEND - Module [PUBLIC]
 
-Fokus: SEO, performa akses publik, dan link pendaftaran.
+Fokus: Optimalisasi SEO, pemuatan data publik, dan alur pendaftaran personal.
 
 ---
 
-## 🛠️ Logic & Database Status Board
+## 🏗️ Data Logic Atomic Status Board
 
-| Task | Status | Priority | Notes |
+| Phase | Logic / API Detail | Atom Detail | Status |
 | :--- | :--- | :--- | :--- |
-| **Public Data Fetch** | [x] DONE | Medium | Loading general content/catalogs. |
-| **SEO Metadata** | [x] DONE | High | Implementation of meta tags & titles. |
-| **Entry Portals** | [x] DONE | High | Secure routing for non-authenticated users. |
+| **02** | **Public Registration** | Personal User INSERT logic | [x] DONE |
+| **05** | **Public Data Load** | Anonymous fetch for dailySchedules | [x] DONE |
+| **05** | **Sitemap Logic** | URL resolution for menus | [ ] PLANNED |
 
 ---
 
-## 📝 Atomic Task Checklist
+## 📝 Micro-Atomic Technical Checklist (Learning Resource)
 
-### 1. Visibility & Performance
-- [x] **SEO Implementation**: Heading structures and meta descriptions.
-- [x] **Zero-DB Protection**: Minimal DB load for public landing pages.
+### Phase 02: Onboarding (Done)
+- [x] **Individual Signup Handler**
+    - [x] **File**: `src/routes/register/+page.server.ts`.
+    - [x] **Mod**: Update to handle `PUBLIK` registration as the only public path.
+    - [x] **Security**: Ensure password hashing is applied even for retail users.
 
-### 2. Funnel Logic
-- [x] **Redirect Guard**: Redirecting logged-in users away from Public pages to Dashboard.
+### Phase 05: Public Showcase Logic (Done)
+- [x] **Guest Catalog Loader**
+    - [x] **File**: `src/routes/+page.server.ts`.
+    - [x] **Query**: Mirror the dashboard date-resolver to fetch menus for anonymous visitors.
+    - [x] **Perf**: Ensure query is lean (only necessary fields for the landing page).
 
----
-*Back to [Master Kanban](../../PROGRESS_KANBAN_MASTER.md)*
+### Phase 07.5: Public Security (In Progress)
+- [ ] **Guest Path Hardening**
+    - [ ] Ensure public loaders for `/packages` and `/` are optimized and type-safe.
+
+### Phase 08: Puzzle Masa Depan (Planned)
+- [ ] **SEO Meta Injection**
+    - [ ] Dynamic meta tag population based on today's specials.
+- [ ] **Lead Tracking**
+    - [ ] Simple logging to see which menus Guest users click most.

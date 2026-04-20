@@ -1,29 +1,45 @@
 # 🎨 KANBAN FRONTEND - Module [ADMIN]
 
-Fokus: Pelaporan keuangan, manajemen pengguna tingkat tinggi, dan pengawasan sistem.
+Fokus: Kontrol sistem tingkat tinggi, analisis finansial, dan manajemen tata kelola.
 
 ---
 
-## 🏗️ UI/UX Status Board
+## 🏗️ UI/UX Atomic Status Board
 
-| Task | Status | Priority | Notes |
+| Phase | Component / Feature | Atom Detail | Status |
 | :--- | :--- | :--- | :--- |
-| **Finance Dashboard** | [ ] PLANNED | High | Profit/Loss visualization. |
-| **User Management** | [/] IN-PROG | Medium | List and role assignment UI. |
-| **Daily Report UI** | [ ] PLANNED | High | Printable table for daily logistics. |
-| **RBAC Protection** | [x] DONE | Critical | Admin-only route guard visualization. |
+| **03** | **Admin Portal** | Unified Dark Sidebar + Master Hub | [x] DONE |
+| **07** | **System Control Hub** | Revenue Stats + Total Users Grid | [x] DONE |
+| **07** | **B2B Creator Hub** | Manual Instansi Registration Tool | [x] DONE |
+| **08** | **Financial Charts** | Revenue Trends (Bar/Line Chart) | [ ] PLANNED |
 
 ---
 
-## 📝 Atomic Task Checklist
+## 📝 Micro-Atomic Technical Checklist (Learning Resource)
 
-### 1. Finance & Analytics
-- [ ] **Stats Grid**: Revenue vs Costs overview cards.
-- [ ] **Chart integration**: Monthly trends visualizer.
+### Phase 03 & 07: Control Center (Done)
+- [x] **Master Layout Implementation**
+    - [x] **File**: `src/routes/admin/+layout.svelte`.
+    - [x] **Design**: Apply **High-Contrast Dark Sidebar** for Super Admin role.
+    - [x] **Sync**: Coordinate sidebar items: "Control Hub", "Users", and "Finance".
+- [x] **Admin Dash Home**
+    - [x] **File**: `src/routes/admin/+page.svelte`.
+    - [x] **Aesthetics**: Use `zinc-800/50` cards with `brand-primary` accents.
+    - [x] **Stats**: Display 3 main KPI cards: Revenue, Instansi Count, and Total Users.
 
-### 2. User & System
-- [x] **User List**: Table of all registered users with filters.
-- [ ] **Role Adjustment**: UI for promoting/demoting user status.
+### Phase 07: B2B Operational Tools (Done)
+- [x] **B2B Account Creator UI**
+    - [x] **File**: `src/routes/admin/+page.svelte`.
+    - [x] **UX**: Dedicated form for Admin to create Instansi accounts manually.
+    - [x] **Logic**: Pass `INSTANSI` category as hidden/fixed input.
 
----
-*Back to [Master Kanban](../../PROGRESS_KANBAN_MASTER.md)*
+### Phase 07.5: Dashboard Stability (In Progress)
+- [ ] **Data Safety Sweep**
+    - [ ] Implement null-safety for `user.name` and other dynamic fields.
+    - [ ] Resolve "Super Admin" layout type mismatch in sidebar.
+
+### Phase 08: Puzzle Masa Depan (Planned)
+- [ ] **Profit & Loss Dashboard**
+    - [ ] Aggregating raw menu costs against selling price.
+- [ ] **Audit Trail Viewer**
+    - [ ] View critical status changes and by whom they were edited.

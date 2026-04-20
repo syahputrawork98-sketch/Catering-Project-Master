@@ -1,32 +1,50 @@
 # 🎨 KANBAN FRONTEND - Module [CUSTOMER SERVICE]
 
-Fokus: Efisiensi operasional, manajemen pesanan, dan verifikasi cepat.
+Fokus: Efisiensi operasional, manajemen stok harian, dan verifikasi pesanan real-time.
 
 ---
 
-## 🏗️ UI/UX Status Board
+## 🏗️ UI/UX Atomic Status Board
 
-| Task | Status | Priority | Notes |
+| Phase | Component / Feature | Atom Detail | Status |
 | :--- | :--- | :--- | :--- |
-| **Order Management** | [x] DONE | High | CRUD Status actions UI. |
-| **Status Badge** | [x] DONE | Medium | Reactive indicator for order states. |
-| **Search & Search** | [x] DONE | High | Rapid lookup for ID and Name. |
-| **Stats Cards** | [x] DONE | Medium | Daily summaries (Pending, Today, Total). |
-| **Thermal Receipt** | [x] DONE | High | Integrated PDF generation for staff. |
-| **Menu Master UI** | [x] DONE | High | Add/Edit menu items master list. |
+| **03** | **CS Portal Hub** | Unified Sidebar + Stats Overview | [x] DONE |
+| **04** | **Order Monitor** | List with Status Badge (6 Types) | [x] DONE |
+| **07** | **Operation Dashboard** | Stats Cards (Orders, Low Stock) | [x] DONE |
+| **07** | **Logistics Highlight** | "Hari Ini" Badge for Today's Orders | [x] DONE |
+| **07** | **B2B Creator UI** | Modal/Form for manual Instansi creation | [x] DONE |
 
 ---
 
-## 📝 Atomic Task Checklist
+## 📝 Micro-Atomic Technical Checklist (Learning Resource)
 
-### 1. Operation Central
-- [x] **Orders Table**: Comprehensive list of all customer transactions.
-- [x] **Status Update**: Dropdown to change order status from CS side.
-- [x] **Receipt Access**: Quick trigger for generating branded receipts.
+### Phase 03 & 04: Order Management (Done)
+- [x] **Operation Hub Layout**
+    - [x] **File**: `src/routes/cs/+layout.svelte`.
+    - [x] **Branding**: Implement **Gourmet Hub** Staff Interface.
+    - [x] **Nav**: Create vertical sidebar for "Operation Hub", "Orders", "Schedule", and "Clients".
+- [x] **Live Order Monitor**
+    - [x] **File**: `src/routes/cs/orders/+page.svelte`.
+    - [x] **Filter**: Implement `$derived` filtering by Search Query and Order Status.
+    - [x] **Action**: Use async `form.requestSubmit()` for seamless status updates.
 
-### 2. Menu Control
-- [x] **Master Form**: Standardized UI for adding new menu items.
-- [x] **Catalog List**: View and manage the existing menu library.
+### Phase 07: Operation Center Refactor (Done)
+- [x] **Premium Stats Overview**
+    - [x] **File**: `src/routes/cs/+page.svelte`.
+    - [x] **Component**: Design 4-card grid for critical operational metrics.
+    - [x] **UX**: Add `animate-pulse` on "Low Stock" indicators.
+- [x] **Logistics Timing UI**
+    - [x] **File**: `src/routes/cs/orders/+page.svelte`.
+    - [x] **Logic**: Add "HARI INI" badge if `order.deliveryDate === todayStr`.
+    - [x] **Styling**: Highlight row with `bg-brand-primary/5` for today's delivery priority.
 
----
-*Back to [Master Kanban](../../PROGRESS_KANBAN_MASTER.md)*
+### Phase 07.5: Dashboard Integrity (In Progress)
+- [ ] **Staff UI Type Sync**
+    - [ ] Resolve layout crashes by syncing `User.role` types.
+    - [ ] Audit staff-specific header components for null-safety.
+
+### Phase 08: Puzzle Masa Depan (Planned)
+- [ ] **Kitchen Display Mode**
+    - [ ] Simple view of "Menu vs Qty" for today's prep.
+- [ ] **Delivery Fleet Monitor**
+    - [ ] Assigning delivery personnel to specific orders.
