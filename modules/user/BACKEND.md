@@ -17,11 +17,11 @@ Fokus pada integritas transaksi, pendaftaran, dan pengelolaan riwayat pesanan.
     - [ ] API penghitung sisa stok real-time.
 
 ## 3. Order & Payment Engine
-- [ ] **Checkout Process**
-    - [ ] Database Transaction: Create Order & OrderItems.
-    - [ ] Database Transaction: Decrement Stock (Atomic).
-- [ ] **Snapshot Logic**
-    - [ ] Ambil snapshot harga menu saat transaksi.
+- [x] **Checkout Process**
+    - [x] Database Transaction: Create Order & OrderItems (Atomic).
+    - [ ] Database Transaction: Decrement Stock (Atomic) - *Planned for Inventory Phase*.
+- [x] **Snapshot Logic**
+    - [x] Ambil snapshot harga menu saat transaksi (`price_snapshot`).
 
 ## 4. Document & History Service
 - [ ] **PDF Generator**

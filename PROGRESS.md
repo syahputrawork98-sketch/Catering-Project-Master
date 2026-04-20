@@ -22,12 +22,14 @@ Dokumen ini mencatat progres pengerjaan fitur secara detail untuk memastikan sin
 - [x] **Landing Page (`/`)**: High-aesthetic hero section & features.
 - [x] **User Dashboard (`/dashboard`)**: Layout sidebar premium & stats cards.
 - [x] **Menu Catalog (`/dashboard/menu`)**: High-Aesthetic Catalog Ready (Grid, Search, Filter).
-- [x] **Staff Management UI**: Form "Tambah Menu" di CS Hub selesai.
-- [x] **Navigation**: Semua link internal sudah aktif (no 404).
+- [x] **Checkout & Cart System**: End-to-End Functional.
+- [x] **Order Tracking UI**: Visual Stepper & Status Badges Ready.
+- [x] **CS Order Dashboard**: Staff management interface Ready.
 
-## 🍱 4. Menu & Order Management (Next Phase: Backend)
-- [ ] **Database**: Skema tabel untuk `menu_items`, `categories`, dan `orders`.
-- [ ] **Backend**: API untuk posting menu oleh CS.
+## 🍱 4. Menu & Order Management (Next Phase: Real-time Data)
+- [ ] **Data Loader**: Query join `orders` + `items` + `menus`.
+- [ ] **Staff Actions**: Toggle status database dari dashboard CS.
+- [ ] **PDF**: Integrasi generator bon/struk PDF.
 - [ ] **Frontend**: Katalog menu harian dengan porsi dinamis.
 - [ ] **Cart System**: Manajemen pesanan di sisi user.
 

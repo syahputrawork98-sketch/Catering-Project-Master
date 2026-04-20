@@ -16,22 +16,23 @@
     - [x] **Frontend**: Sidebar Navigation (Orders, Menu, Profile) - *Ready*.
     - [x] **Frontend**: Premium Card Menu (Foto, Nama, Info Stok).
     - [ ] **Backend**: Query menu `available_date = TODAY`.
-- [ ] **B. Sistem Keranjang**
-    - [ ] **Frontend**: Modal Preview Keranjang.
-    - [ ] **Frontend**: Sinkronisasi LocalStorage (Data tidak hilang jika refresh).
+- [x] **B. Sistem Keranjang**
+    - [x] **Frontend**: Sidebar Cart Drawer (Sliding UI - High-End).
+    - [x] **Frontend**: Sinkronisasi LocalStorage (Persistent Store).
     - [ ] **Backend**: Validasi stok sisa di server saat klik "Add to Cart".
 
-## 3. Checkout & Payment (`/dashboard/cart`)
-- [ ] **A. Finalisasi Checkout**
-    - [ ] **Frontend**: Rincian Biaya (Total Harga Pokok + PPN).
-    - [ ] **Frontend**: Tombol "Pesan Sekarang".
+## 3. Checkout & Payment (`/dashboard/checkout`)
+- [x] **A. Finalisasi Checkout**
+    - [x] **Frontend**: Rincian Biaya (Total Harga Pokok + PPN).
+    - [x] **Frontend**: Tombol "Konfirmasi Pesanan" (Premium Layout).
     - [ ] **Backend**: Store `price_snapshot` dan `tax_snapshot`.
     - [ ] **Backend**: Update stok otomatis (PostgreSQL Transaction).
 
 ## 4. Tracking & History (`/dashboard/orders`)
-- [ ] **A. Monitoring Status Aktif**
-    - [ ] **Frontend**: Visual Stepper (Order -> Diproses -> Kirim -> Selesai).
-    - [ ] **Frontend**: Tombol "Download Bon PDF" (Thermal format).
-- [ ] **B. Riwayat Belanja (History)**
-    - [ ] **Frontend**: List pesanan masa lalu dengan filter bulan.
+- [x] **A. Monitoring Status Aktif**
+    - [x] **Frontend**: Visual Stepper (Ordered -> Paid -> Delivered).
+    - [x] **Frontend**: Status Badge dinamis (OrderStatusBadge).
+    - [ ] **Frontend**: Tombol "Download Bon PDF" (Planned).
+- [x] **B. Riwayat Belanja (History)**
+    - [x] **Frontend**: Premium Card List (Gourmet Aesthetic).
     - [ ] **Backend**: Query riwayat per `user_id`.

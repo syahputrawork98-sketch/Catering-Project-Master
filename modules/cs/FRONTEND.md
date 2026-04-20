@@ -18,9 +18,9 @@
     - [ ] **Backend**: Proses `UPSERT` data ke tabel DailySchedules.
 
 ## 3. Order Monitor (`/cs/orders`)
-- [ ] **A. Live Order Table**
-    - [ ] **Frontend**: Tabel interaktif dengan filter Status (Pending/Done).
-    - [ ] **Frontend**: Komponen "Badge Status" (Warna-warni sesuai progres).
+- [x] **A. Live Order Table**
+    - [x] **Frontend**: Tabel interaktif dengan filter Status & Pencarian.
+    - [x] **Frontend**: Komponen "Badge Status" (OrderStatusBadge).
     - [ ] **Backend**: Query join `Orders` + `Users` + `OrderItems`.
 - [ ] **B. Cetak Rekap Dapur**
     - [ ] **Frontend**: Tombol "Print Rekap" (Print-friendly CSS).
