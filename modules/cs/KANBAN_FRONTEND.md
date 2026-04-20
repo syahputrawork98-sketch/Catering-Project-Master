@@ -43,10 +43,13 @@ Fokus: Efisiensi operasional, manajemen stok harian, dan verifikasi pesanan real
     - [x] Resolve layout crashes by syncing `User.role` types.
     - [x] Audit staff-specific header components for null-safety.
 
-### Phase 07.6: UI Creative Design Audit (In Progress)
-- [ ] **Operation Hub Visual Polish**
-    - [ ] Audit stat cards for better contrast and micro-interactions.
-    - [ ] Improve empty-state styling for Orders and Schedules.
+### Phase 07.6: UI Creative Design Audit (Done)
+- [x] **Operation Hub Visual Polish**
+    - [x] Audit stat cards for better contrast and micro-interactions.
+    - [x] Improve empty-state styling for Orders and Schedules.
+- [x] **Stock & Client Dedicated Routes**
+    - [x] Create `/cs/stock` for daily stock management.
+    - [x] Create `/cs/clients` for B2B client management.
 
 ### Phase 08: Puzzle Masa Depan (Planned)
 - [ ] **Kitchen Display Mode**

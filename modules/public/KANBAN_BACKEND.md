@@ -32,9 +32,11 @@ Fokus: Optimalisasi SEO, pemuatan data publik, dan alur pendaftaran personal.
 - [x] **Guest Path Hardening**
     - [x] Ensure public loaders for `/packages` and `/` are optimized and type-safe.
 
-### Phase 07.6: UI Audit Enablement (In Progress)
-- [ ] **Global Layout Audit**
-    - [ ] Audit responsive behavior of the new `PublicNavbar`.
+### Phase 07.6: UI Audit Enablement (Done)
+- [x] **Global Layout Audit**
+    - [x] Audit responsive behavior of the new `PublicNavbar`.
+- [x] **Mock Session Implementation**
+    - [x] Verified `AUDIT_MODE` persistence across landing pages.
 
 ### Phase 08: Puzzle Masa Depan (Planned)
 - [ ] **SEO Meta Injection**

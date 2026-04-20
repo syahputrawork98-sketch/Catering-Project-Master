@@ -40,9 +40,12 @@ Fokus: Agregasi data operasional, mutasi status pesanan, dan manajemen master me
 - [x] **B2B Payload Validation**
     - [x] Tighten input validation for manual Instansi creation.
 
-### Phase 07.6: UI Audit Enablement (In Progress)
-- [ ] **Auth Bypass for Audit**
-    - [ ] Create a dev-flag to temporarily disable `authHandle` and `rbacHandle` for UI walkthroughs.
+### Phase 07.6: UI Audit Enablement (Done)
+- [x] **Auth Bypass for Audit**
+    - [x] Fixed `mock-audit-id` to valid UUID in `hooks.server.ts` to prevent DB type mismatch.
+- [x] **Stock & Client Management APIs**
+    - [x] Implemented `updateStock` action in `/cs/stock`.
+    - [x] Implemented `createClient` and `toggleStatus` in `/cs/clients`.
 
 ### Phase 08: Puzzle Masa Depan (Planned)
 - [ ] **Real-time Push Notifications**

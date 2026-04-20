@@ -49,10 +49,11 @@ Fokus: Integritas data transaksi, keamanan RBAC, dan sinkronisasi stok atomik.
 - [x] **Auth.js Logic Polish**
     - [x] Ensure `jwt` and `session` callbacks handle type-casted roles safely.
 
-### Phase 07.6: UI Creative Design Audit (In Progress)
-- [ ] **User Portal Aesthetic Audit**
-    - [ ] Refine date scroller visuals and layout consistency.
-    - [ ] Audit Menu Cards for desktop larger screens.
+### Phase 07.6: UI Creative Design Audit (Done)
+- [x] **Relational Query Normalization**
+    - [x] Corrected `mock-audit-id` to valid UUID in `hooks.server.ts` to prevent Postgres type mismatch.
+- [x] **Fault-Tolerant Loaders**
+    - [x] Added `try/catch` to `/dashboard/orders` loader to ensure UI stability.
 
 ### Phase 08: Puzzle Masa Depan (Planned)
 - [ ] **Point Ledger Logic**

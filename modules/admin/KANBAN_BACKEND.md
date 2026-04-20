@@ -41,7 +41,7 @@ Fokus: Keamanan tingkat tinggi, agregasi finansial, dan otoritas sistem pusat.
 ### Phase 07.6: UI Audit Enablement (Done)
 - [x] **Context Injection for Audit**
     - [x] **File**: `src/hooks.server.ts`.
-    - [x] **Logic**: Implement `AUDIT_MODE` with mock user session injection to prevent layout crashes.
+    - [x] **Logic**: Fixed `mock-audit-id` to valid UUID to prevent Postgres type errors.
 - [x] **Expense Logger API**
     - [x] **Action**: `logExpense` handler to insert shopping data into `expenses` table.
 

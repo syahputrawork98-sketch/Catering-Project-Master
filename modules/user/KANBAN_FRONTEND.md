@@ -63,10 +63,12 @@ Fokus: Pengalaman pengguna mobile-first, estetika premium **Gourmet Hub**, dan r
 - [x] **Type-Safe Prop Management**
     - [x] Update `MenuCard.svelte` to use strict types for `basePrice` and `image`.
 
-### Phase 07.6: UI Creative Design Audit (In Progress)
-- [ ] **User Portal Aesthetic Audit**
-    - [ ] Refine date scroller visuals and layout consistency.
-    - [ ] Audit Menu Cards for desktop larger screens.
+### Phase 07.6: UI Creative Design Audit (Done)
+- [x] **User Portal Aesthetic Audit**
+    - [x] Refine date scroller visuals and layout consistency.
+    - [x] Audit Menu Cards for desktop larger screens.
+- [x] **Dashboard Accessibility Fix**
+    - [x] Resolution of the "Pesanan Saya" page crash via UUID type normalization.
 
 ### Phase 08: Puzzle Masa Depan (Planned)
 - [ ] **Loyalty Points UI**
