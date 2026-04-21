@@ -5,24 +5,45 @@ Rancangan database PostgreSQL menggunakan Drizzle ORM untuk menjamin integritas 
 ## 📊 Entity Relationship Diagram (ERD) - Conceptual
 
 ### 1. Users (Autentikasi & RBAC)
-Menyimpan data akun untuk 4 modul utama.
+Menyimpan data akun untuk seluruh modul (Admin, CS, User).
 - `id`: UUID (PK)
 - `name`: String
-- `phone`: String (Unique, digunakan sebagai ID Login)
+- `phone`: String (Unique, ID Login)
 - `password`: String (Hashed)
 - `role`: Enum (`ADMIN`, `CUSTOMER_SERVICE`, `USER`)
-- `category`: Enum (`PUBLIK`, `INSTANSI`)
-- `instansi_name`: String (Nullable)
+- `category`: Enum (`PUBLIK`, `INSTANSI`, `PEGAWAI_INSTANSI`)
+- `instansi_name`: String (Nama instansi/bisnis jika kategori bukan Publik)
 - `status`: Enum (`PENDING`, `ACTIVE`)
 - `created_at`: Timestamp
 
-### 2. Menus (Master Produk)
+
+### 2. Menu Types (Jenis Menu)
+Tabel dinamis untuk pengelompokan besar menu (e.g., Daily, Paket, Buffet).
+- `id`: UUID (PK)
+- `name`: String (e.g., "Menu Daily")
+- `slug`: String (Unique)
+- `created_at`: Timestamp
+
+### 3. Menu Categories (Kategori Produk)
+Tabel dinamis untuk jenis hidangan (e.g., Nasi Kotak, Bento, Snack).
+- `id`: UUID (PK)
+- `name`: String (e.g., "Nasi Kotak")
+- `slug`: String (Unique)
+- `created_at`: Timestamp
+
+### 4. Menus (Master Produk)
+Setiap menu wajib terikat pada satu Tipe dan satu Kategori.
 - `id`: UUID (PK)
 - `name`: String
 - `description`: Text
 - `base_price`: Decimal
-- `image_url`: String
+- `image`: String (URL/Path Foto)
+- `type_id`: UUID (FK -> MenuTypes.id)
+- `category_id`: UUID (FK -> MenuCategories.id)
+- `created_by`: UUID (FK -> Users.id)
 - `created_at`: Timestamp
+
+
 
 ### 3. DailySchedules (Jadwal Katalog Harian)
 - `id`: Serial (PK)
