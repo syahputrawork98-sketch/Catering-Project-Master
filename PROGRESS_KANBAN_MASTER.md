@@ -9,15 +9,16 @@ Dokumen ini adalah Command Center pengerjaan fitur dengan resolusi **Micro-Atomi
 | Phase | Feature Bereich | Frontend Detail | Backend Detail | Status Tag |
 | :--- | :--- | :--- | :--- | :--- |
 | **01** | **Infrastructure** | [x] SvelteKit 5 + Vite | [x] Docker + Postgres | **DONE** |
-| **02** | **Auth & Entry** | [x] Register/Login UI | [x] Argon2 + Auth.js | **DONE** |
-| **03** | **Architecture** | [x] Gourmet Theme | [x] Role-Based Guard | **DONE** |
+| **02** | **Auth & Entry** | [x] Register/Login UI | [x] Argon2 + Auth.js | **SUSPENDED** |
+| **03** | **Architecture** | [x] Gourmet Theme | [x] Role-Based Guard | **BYPASSED** |
 | **04** | **Logistics 1** | [x] 80mm Receipt PDF | [x] Relational Order Query | **DONE** |
 | **05** | **Core Menu** | [x] Premium Date Scroller | [x] Atomic Date-based Resolver | **DONE** |
 | **06** | **Ordering** | [x] Mobile Cart persistence | [x] Atomic Stock Sync Transaction | **DONE** |
 | **07** | **Operations** | [x] Unified Staff Sidebars | [x] B2B Manual Account Tool | **DONE** |
 | **07.5** | **Integrity** | [x] Type Augmentation | [x] Null-Safety Audit | **DONE** |
 | **07.6** | **UI Design Audit** | [x] CS Creative Polish | [x] Admin Layout Audit | **DONE** |
-| **08** | **Reporting** | [ ] Admin Finance UI | [ ] Profit Aggregation | **PLANNED** |
+| **08** | **Reporting** | [x] Admin Finance UI | [x] Profit Aggregation | **DONE** |
+
 
 ---
 
