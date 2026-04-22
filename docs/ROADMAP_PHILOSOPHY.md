@@ -41,6 +41,20 @@ if (process.env.NODE_ENV === 'development') {
 }
 ```
 
+```
+
+---
+
+## 🎨 Gourmet Design System: Universal Experience
+
+Membangun aplikasi premium bukan hanya soal fitur, tapi soal **kenyamanan visual** dan **konsistensi**:
+
+1.  **Universal Theme (Dual-Mode)**: Setiap elemen harus memiliki varian Terang dan Gelap yang terukur. Menggunakan variabel CSS murni (`--bg-app`, `--text-app`) untuk menjamin kecepatan dan kompatibilitas.
+2.  **Adaptive Interface**: Meskipun role berbeda (Admin vs CS), bahasa visual (icon, padding, font) harus seragam. Owner harus merasa tetap di "dashboard yang sama" meskipun berpindah dari Laporan Keuangan ke Manajemen Menu.
+3.  **Aesthetic Accessibility**: Desain harus "wow" di pandangan pertama (Gourmet style) namun tetap fungsional dan mudah dioperasikan di perangkat mobile.
+
+---
+
 ## 🎯 Kesimpulan
 Membangun "Otot" (Fitur) harus lebih didahulukan daripada membangun "Pintu" (Auth). Dengan begitu, kita bisa memastikan aplikasi berfungsi dengan baik sebelum kita menentukan siapa yang boleh membukanya.
 

@@ -13,6 +13,7 @@ Fokus: Branding Gourmet Hub, penemuan menu (discovery), dan alur konversi pengun
 | **03** | **Date Scroller** | Global date selection for guests | [x] DONE |
 | **08** | **Gourmet Branding** | Global Sync to "Gourmet Hub" | [x] DONE |
 | **08** | **CTA Redirection** | "Login to Order" logic on cards | [x] DONE |
+| **11** | **Universal UI** | Dual-Theme (Dark/Light) Integration | [x] DONE |
 
 ---
 
@@ -36,6 +37,9 @@ Fokus: Branding Gourmet Hub, penemuan menu (discovery), dan alur konversi pengun
     - [x] Declare types for public navigation items.
 - [x] **Landing Page Visual Flow**
     - [x] Optimization for mobile hero section.
+- [x] **Universal UI Sync**
+    - [x] **Theme Switcher**: Persistent Dark/Light mode.
+    - [x] **CSS Variable System**: Native-feel performance.
 
 ### Phase 11: Puzzle Masa Depan (Planned)
 - [ ] **SEO Optimization**
